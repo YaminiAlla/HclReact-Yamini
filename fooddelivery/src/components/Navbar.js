@@ -3,6 +3,7 @@ import logIn from './logIn';
 import SignUp from './SignUp';
 import cart from './cart';
 import Restaurants from './Restaurants';
+// import Feedback from './Feedback';
 import {
     BrowserRouter as Router,
     Route,
@@ -45,13 +46,17 @@ class Navbar extends Component {
                                     <NavLink className="nav-link" to="/cart" activeClassName="active"> <span><i className="fas fa-shopping-cart"></i></span> cart</NavLink>
                                 </li>
 
-
+                              {/*  <li className="nav-item">
+                                    <NavLink className="nav-link" to="/Feedback" activeClassName="active"> Feedback</NavLink>
+                                </li> */}
+            
                             </ul>
                         </div>
                     </nav>
                     <Route exact path="/logIn" component={logIn} />
                     <Route exact path="/SignUp" component={SignUp} />
                     <Route exact path="/cart" component={cart}/>
+                    //<Route exact path="/Feedback" component={Feedback}/>
                     <Route exact path="/Restaurants" component={Restaurants} />
                     <Route exact path="/viewMenu/:restaurantId" component={viewRestaurantItems}/>
             </Router>
